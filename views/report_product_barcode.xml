@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_product_barcode">
+    <t t-name="product_barcode_qweb.report_product_barcode">
+                <div class="page" style="margin-left: -9mm">
+                    <table style="font-size:8.0px;" cellspacing="0">
+                        <tr style="height: 19mm" t-foreach="getLabelRows(data['form'])" t-as="label_row">
+                            <td align="center" style="width: 38mm;padding: 0mm 0mm 0mm 0mm" t-foreach="label_row" t-as="label_data">
+                                <span t-esc="label_data['name']"/><br/>
+                                <span style="font-size:10.0px;font-weight:bold" t-esc="formatLang(label_data['price'], currency_obj = res_company.currency_id)"/><br/>
+                                <span>
+                                   <img style="width: 30mm;height: 7mm;" t-att-src="'data:image/png;base64,'+generateBarcode(label_data['default_code'])"/>
+                                </span>
+                                <br/><span t-esc="label_data['default_code']"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    </t>
+</template>
+</data>
+</openerp>

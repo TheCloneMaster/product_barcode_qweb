@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<openerp>
+    <data>
+
+        <report
+            id="voucher_receipt_qweb"
+            string="Voucher Receipt"
+            model="account.voucher"
+            report_type="qweb-pdf"
+            name="voucher_receipt_qweb.report_voucher_receipt"
+            file="voucher_receipt_qweb.report_voucher_receipt"
+            menu="False"
+         />
+    </data>
+</openerp>

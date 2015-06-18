@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<openerp>
+    <data>
+
+        <report
+            id="pos_lines_detail"
+            string="summary of Sales"
+            model="pos.order"
+            report_type="qweb-pdf"
+            name="point_of_sale.report_summaryofsales"
+            file="point_of_sale.report_summaryofsales"
+            menu="False"
+         />
+
+        <menuitem icon="STOCK_PRINT" action="action_report_pos_summary"
+                id="menu_pos_summary" parent="point_of_sale.menu_point_rep" sequence="6" />
+
+
+    </data>
+</openerp>
